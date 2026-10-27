@@ -48,7 +48,7 @@ export const FINAL = Object.freeze({
   /** package.json "publisher" ("wisply"): registered on the VS Code Marketplace and Open VSX (spec D6). */
   publisher: false,
   /** SETUP_GUIDE_URL (src/extension.ts) and package.json "homepage": live with the wisply.ai install page. */
-  setupGuide: false,
+  setupGuide: true,
   /**
    * package.json "repository" (github.com/fal3/wisply-vscode) and the
    * connector source the README and the bundle banner name
