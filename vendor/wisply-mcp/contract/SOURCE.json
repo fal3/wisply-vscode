@@ -1,22 +1,22 @@
 {
   "schema": "wisply-mcp-vendor-v1",
-  "provisional": true,
+  "provisional": false,
   "sources": [
     {
       "repository": "github:fal3/wisply-ai",
-      "commit": "885cc75 (transcribed)",
-      "provisional": true,
+      "commit": "92f8939ed3208a69deaa112aa3aa74a67933d3a4",
+      "provisional": false,
+      "on_main": true,
       "files": {
         "contract/mcp-contract.json": {
           "upstream": "Docs/mcp-contract.json",
-          "transcribed_from": "Wisply/Services/MCP/MCPToolCatalog.swift",
-          "sha256": "710d38ab86fb02d2e0d21d678cb1184006fc578242858bc2fe0d4941ac5ee0ee"
+          "sha256": "14d16cc7349784b5a86164fbb586ecc5f24ac04a03309b945fe2fc097b3a41aa"
         }
       }
     },
     {
       "repository": "github:fal3/wisply-claude-plugin",
-      "commit": "3945503dede4b952efa50c39fe56862cab23e3d7",
+      "commit": "aa37b8dcaed606f4f511218ad6bf2c8dcf88d2c7",
       "provisional": false,
       "files": {
         "lib/identity.mjs": {

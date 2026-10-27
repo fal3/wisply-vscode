@@ -6,10 +6,11 @@
 // wisply.ai guide, Wisply's snippets, the connector's own messages, catalog
 // listings, and this repository itself once fal3/wisply-mcp is public or its
 // README is submitted to a catalog) may offer them as commands to run before
-// the organization exists and wisply-mcp is held too (PACKAGE_NAME_FINAL;
-// SECURITY.md "Release controls" item 1). Change them here, in package.json
-// and in the manifests together; tests/pack.test.mjs fails while they
-// disagree.
+// the organization exists and wisply-mcp is held too (PACKAGE_NAME_FINAL here,
+// and "published": false in clients/mcp-clients.json, which its consumers
+// check before they render anything; SECURITY.md "Release controls" item 1).
+// Change them here, in package.json and in the manifests together;
+// tests/pack.test.mjs fails while they disagree.
 import contract from './contract.mjs';
 
 export const PACKAGE_NAME = '@wisply/mcp';
@@ -87,11 +88,11 @@ export const PROTOCOL_VERSIONS = Object.freeze(['2025-11-25', '2025-06-18', '202
 /**
  * Commands planned for later 0.x releases and not in this build. The bin
  * answers them with a "not in this build yet" line (exit 1), and no message
- * tells users to run one of them (tests/bridge.test.mjs). setup, status and
- * forget are in (lib/cli.mjs), so lib/messages.mjs points at `setup`, as the
- * spec's error texts do. DIST-M4 removes print-config and install.
+ * tells users to run one of them (tests/bridge.test.mjs). Every planned
+ * command is in now (setup, status, forget, print-config and install in
+ * lib/cli.mjs), so the list is empty; it stays for the next one.
  */
-export const PLANNED_COMMANDS = Object.freeze(['print-config', 'install']);
+export const PLANNED_COMMANDS = Object.freeze([]);
 
 /** The macOS Keychain item the connector manages (written by `setup`, removed by `forget`; lib/token.mjs). */
 export const KEYCHAIN_SERVICE = 'ai.wisply.mcp';
