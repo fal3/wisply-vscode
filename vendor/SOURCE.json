@@ -1,12 +1,14 @@
 {
   "schema": "wisply-vscode-vendor-v1",
-  "provisional": true,
+  "provisional": false,
   "sources": [
     {
       "repository": "github:fal3/wisply-mcp",
-      "commit": "3780288a1a88da9c3ecfeb18ed32d8850e37e5d3",
-      "ref": "claude/distribution-3",
-      "contract_provisional": true,
+      "commit": "36f0d776bd0fce08856a5f87c4754d53776c37f4",
+      "ref": "main",
+      "remote": "https://github.com/fal3/wisply-mcp",
+      "remote_main": "36f0d776bd0fce08856a5f87c4754d53776c37f4",
+      "contract_provisional": false,
       "files": {
         "vendor/wisply-mcp/LICENSE": {
           "upstream": "LICENSE",
@@ -14,15 +16,19 @@
         },
         "vendor/wisply-mcp/bin/wisply-mcp.mjs": {
           "upstream": "bin/wisply-mcp.mjs",
-          "sha256": "63397e3a5c891af94a58eb5c35c49e4cf2b254ff806b73df9419b427bbb496ff"
+          "sha256": "87e056845ac220c1601c909a3527269d81a9d90ff6eff636c958c6cbbf0d8daa"
+        },
+        "vendor/wisply-mcp/clients/mcp-clients.mjs": {
+          "upstream": "clients/mcp-clients.mjs",
+          "sha256": "ce547248cb35049ac00483c732e5a9a40eef71a800468eed9bf5c255e4e3a108"
         },
         "vendor/wisply-mcp/contract/SOURCE.json": {
           "upstream": "contract/SOURCE.json",
-          "sha256": "feca98f147133b938611b53b227b6211ae38c2c2a72711ba3b9192d816046860"
+          "sha256": "7e99aefa99711a590ffc27352d4f8e9a443c82aa8e13c136692c13a4b4de2c73"
         },
         "vendor/wisply-mcp/contract/mcp-contract.mjs": {
           "upstream": "contract/mcp-contract.mjs",
-          "sha256": "def6c511bc688d03ef0d3c915abc1275f606313824c3c8083b85afa2fcdb2bab"
+          "sha256": "d23e0ba28647caae93a0a05cf76987dc18f2316c0a892f631fcfdd1482a8bddf"
         },
         "vendor/wisply-mcp/lib/bridge.mjs": {
           "upstream": "lib/bridge.mjs",
@@ -30,11 +36,15 @@
         },
         "vendor/wisply-mcp/lib/cli.mjs": {
           "upstream": "lib/cli.mjs",
-          "sha256": "227161201f02a68342335fb483439d799d0018ceb46a1add0c3c9958de194541"
+          "sha256": "a1194f0c8826e2a3698d14e0787cdfbd6e40f14cddbb2d2b5d95736e91fb2eaf"
+        },
+        "vendor/wisply-mcp/lib/clients.mjs": {
+          "upstream": "lib/clients.mjs",
+          "sha256": "bce61de431d8f9888a18176db338294403adbd7979f7a3c37d8e44c22c9f1428"
         },
         "vendor/wisply-mcp/lib/constants.mjs": {
           "upstream": "lib/constants.mjs",
-          "sha256": "ce04507134e1762c4800f6698c24abed48ebcd1dd6272ba9c79a9465579c59dc"
+          "sha256": "07d228f7852d1e6492c4e2306b201bd2f0976f7afe7584e5964b37b1a42fa57e"
         },
         "vendor/wisply-mcp/lib/contract-shape.mjs": {
           "upstream": "lib/contract-shape.mjs",
@@ -58,7 +68,7 @@
         },
         "vendor/wisply-mcp/lib/messages.mjs": {
           "upstream": "lib/messages.mjs",
-          "sha256": "18e6d0a20812b39b53b7fab45370d8b096e5fd178a2991d7799ef8f60cff7f12"
+          "sha256": "2ab4f7d01d2a721a828a7ba831557db83f6b27e92bba3f4fdc9a8bfcd7970781"
         },
         "vendor/wisply-mcp/lib/scopes.mjs": {
           "upstream": "lib/scopes.mjs",
@@ -72,7 +82,7 @@
     },
     {
       "repository": "github:fal3/wisply-claude-plugin",
-      "commit": "3945503dede4b952efa50c39fe56862cab23e3d7",
+      "commit": "aa37b8dcaed606f4f511218ad6bf2c8dcf88d2c7",
       "files": {
         "vendor/shared.mjs": {
           "upstream": "lib/shared.mjs",
@@ -83,8 +93,10 @@
   ],
   "skill": {
     "repository": "github:fal3/wisply-mcp",
-    "commit": "f0d3a4d0466950d8f7cb72413699c6279484294f",
-    "ref": "claude/distribution-4",
+    "commit": "36f0d776bd0fce08856a5f87c4754d53776c37f4",
+    "ref": "main",
+    "remote": "https://github.com/fal3/wisply-mcp",
+    "remote_main": "36f0d776bd0fce08856a5f87c4754d53776c37f4",
     "files": {
       "vendor/skills/wisply-memos/SKILL.md": {
         "upstream": "skills/wisply-memos/SKILL.md",
@@ -105,6 +117,6 @@
       "vendor/wisply-mcp/lib/messages.mjs": "src/editor-messages.mjs"
     },
     "esbuild": "0.28.2",
-    "sha256": "23db94656bc9d129c69b7817a0c42bf85c4174ef3247d5f0c97b09796b29368e"
+    "sha256": "a63020f003eb259b6cd9f44713f546d572b4e96a1f59bbf116ac6e1e69ca8f65"
   }
 }

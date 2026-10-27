@@ -55,7 +55,7 @@ export const FINAL = Object.freeze({
    * (github.com/fal3/wisply-mcp): both repositories exist and are public, so
    * store reviewers and users can read the code that runs.
    */
-  repositories: false,
+  repositories: true,
   /**
    * package.json "bugs" (www.wisply.ai/support) is live, and SUPPORT_EMAIL
    * (support@wisply.ai) is read: package.json "author.email" and the

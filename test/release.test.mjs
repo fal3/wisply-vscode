@@ -42,18 +42,14 @@ const releasable = () => withMcp({ ...source, provisional: false, skill: { ...so
   (entry) => ({ ...entry, ...FROM_GITHUB_MAIN, contract_provisional: false }));
 const ready = (overrides = {}) => releaseProblems({ source: releasable(), final: ALL_FINAL, readme: STORE_README, ...overrides });
 
-test('this tree is not releasable: provisional, connector and skill not from main, every placeholder, unfilled README', () => {
+test('this tree refuses release until publisher, setup guide, support and app versions are final', () => {
   const problems = releaseProblems({ source, readme });
-  assert.equal(problems.length, 8, problems.join('\n'));
-  assert.match(problems[0], /provisional/);
-  assert.match(problems[1], /^The connector .*not main/);
-  assert.match(problems[2], /^The skill .*not main/);
-  assert.match(problems[3], /publisher/);
-  assert.match(problems[4], /setup guide/);
-  assert.match(problems[5], /fal3\/wisply-vscode and github\.com\/fal3\/wisply-mcp/);
-  assert.match(problems[6], /support page and the mailbox \(support@wisply\.ai, in package\.json and SECURITY\.md\)/);
-  assert.equal(problems[7], 'README.md still has {READ_MIN}, {RECORDING_MIN}: fill them in from App Store Connect.');
-  assert.deepEqual({ ...FINAL }, { publisher: false, setupGuide: false, repositories: false, support: false });
+  assert.equal(problems.length, 4, problems.join('\n'));
+  assert.match(problems[0], /publisher/);
+  assert.match(problems[1], /setup guide/);
+  assert.match(problems[2], /support page and the mailbox \(support@wisply\.ai, in package\.json and SECURITY\.md\)/);
+  assert.equal(problems[3], 'README.md still has {READ_MIN}, {RECORDING_MIN}: fill them in from App Store Connect.');
+  assert.deepEqual({ ...FINAL }, { publisher: false, setupGuide: false, repositories: true, support: false });
 });
 
 test('one mailbox: package.json, README.md and SECURITY.md all name SUPPORT_EMAIL, which FINAL.support confirms', () => {
