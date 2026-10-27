@@ -61,7 +61,7 @@ export const FINAL = Object.freeze({
    * (support@wisply.ai) is read: package.json "author.email" and the
    * vulnerability-report address in SECURITY.md, which the stores show.
    */
-  support: false,
+  support: true,
 });
 
 /** The one mailbox the package names: package.json author.email, README.md and SECURITY.md (contactProblems). */
