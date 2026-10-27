@@ -4,10 +4,10 @@
   "sources": [
     {
       "repository": "github:fal3/wisply-mcp",
-      "commit": "36f0d776bd0fce08856a5f87c4754d53776c37f4",
+      "commit": "a0a45a350657c6654f629f190bce8ff91f54f3fd",
       "ref": "main",
       "remote": "https://github.com/fal3/wisply-mcp",
-      "remote_main": "36f0d776bd0fce08856a5f87c4754d53776c37f4",
+      "remote_main": "a0a45a350657c6654f629f190bce8ff91f54f3fd",
       "contract_provisional": false,
       "files": {
         "vendor/wisply-mcp/LICENSE": {
@@ -44,7 +44,7 @@
         },
         "vendor/wisply-mcp/lib/constants.mjs": {
           "upstream": "lib/constants.mjs",
-          "sha256": "07d228f7852d1e6492c4e2306b201bd2f0976f7afe7584e5964b37b1a42fa57e"
+          "sha256": "a087acc71367743020b308fc450d3cd01aef88d1712d0794ab8ca7251cc5b971"
         },
         "vendor/wisply-mcp/lib/contract-shape.mjs": {
           "upstream": "lib/contract-shape.mjs",
@@ -93,10 +93,10 @@
   ],
   "skill": {
     "repository": "github:fal3/wisply-mcp",
-    "commit": "36f0d776bd0fce08856a5f87c4754d53776c37f4",
+    "commit": "a0a45a350657c6654f629f190bce8ff91f54f3fd",
     "ref": "main",
     "remote": "https://github.com/fal3/wisply-mcp",
-    "remote_main": "36f0d776bd0fce08856a5f87c4754d53776c37f4",
+    "remote_main": "a0a45a350657c6654f629f190bce8ff91f54f3fd",
     "files": {
       "vendor/skills/wisply-memos/SKILL.md": {
         "upstream": "skills/wisply-memos/SKILL.md",
@@ -117,6 +117,6 @@
       "vendor/wisply-mcp/lib/messages.mjs": "src/editor-messages.mjs"
     },
     "esbuild": "0.28.2",
-    "sha256": "a63020f003eb259b6cd9f44713f546d572b4e96a1f59bbf116ac6e1e69ca8f65"
+    "sha256": "4b3e4d945a99a3833de53f160a22e4c545e3e11d35533bdd203f0407660ff1db"
   }
 }
