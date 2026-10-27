@@ -2,11 +2,11 @@
 //
 // PACKAGE_NAME and PACKAGE_SPEC are placeholders until Alex publishes the
 // package (spec D3: if the npm organization "wisply" is taken, the fallback is
-// "wisply-mcp"). Neither name is registered yet, so nothing public (the
+// "wisply-mcp"). Ownership has to be recorded before anything public (the
 // wisply.ai guide, Wisply's snippets, the connector's own messages, catalog
 // listings, and this repository itself once fal3/wisply-mcp is public or its
-// README is submitted to a catalog) may offer them as commands to run before
-// the organization exists and wisply-mcp is held too (PACKAGE_NAME_FINAL here,
+// README is submitted to a catalog) offers them as commands to run. The
+// organization must exist with 2FA required (PACKAGE_NAME_FINAL here,
 // and "published": false in clients/mcp-clients.json, which its consumers
 // check before they render anything; SECURITY.md "Release controls" item 1).
 // Change them here, in package.json and in the manifests together;
