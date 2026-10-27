@@ -20,7 +20,7 @@
 import { mkdtempSync, mkdirSync, rmSync, writeFileSync } from 'node:fs';
 import { createServer } from 'node:net';
 import { tmpdir } from 'node:os';
-import { join } from 'node:path';
+import { basename, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 export const ROOT = fileURLToPath(new URL('../..', import.meta.url));
@@ -74,7 +74,9 @@ async function main() {
       extensionDevelopmentPath: ROOT,
       extensionTestsPath: SUITE,
       extensionTestsEnv: { WISPLY_INTEGRATION_PORT: String(port) },
-      launchArgs: ['--disable-extensions', `--user-data-dir=${userDataDir}`, `--extensions-dir=${extensionsDir}`, '--skip-welcome',
+      // Cursor's Agent window omits UI development extensions; test its editor window.
+      launchArgs: [...(basename(process.env.VSCODE_PATH ?? '').toLowerCase().startsWith('cursor') ? ['--classic'] : []),
+        '--disable-extensions', `--user-data-dir=${userDataDir}`, `--extensions-dir=${extensionsDir}`, '--skip-welcome',
         '--skip-release-notes'],
     });
   } finally {

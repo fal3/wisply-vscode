@@ -23,6 +23,7 @@ npm run check          # typecheck, tests, build, development package (wisply-de
 - `WISPLY_MCP_DIR=<wisply-mcp> WISPLY_PLUGIN_DIR=<wisply-claude-plugin> npm test` also compares every vendored file, the skill included, with the source repositories, checks that each recorded commit is on its recorded branch, and checks that the snapshot is current: that branch (for `main`, `origin/main` as last fetched) hasn't changed a vendored file or the skill since the recorded commit (`changedSince` in `scripts/sync-vendor.mjs`). When that fails, re-vendor.
 - `WISPLY_RELEASE=1 npm test` fails wherever the release gate would.
 - `npm run test:integration` runs `test/integration/suite.cjs` in a real VS Code with `@vscode/test-electron` (activation, commands, the MCP provider, the skill, the settings). It downloads VS Code, so it runs on a Mac or in public CI, not in the agent container, and `npm run check` doesn't run it. Off macOS it stops unless `WISPLY_INTEGRATION_ANY_OS=1`. It uses a fresh profile with the status item off and an unused port, so it never reaches a Wisply running on the Mac. The rest of the Mac QA (V1–V9 in the distribution spec) is by hand.
+- `VSCODE_PATH=/Applications/Cursor.app/Contents/MacOS/Cursor npm run test:integration` tests Cursor in a temporary classic editor window. Cursor 3.27.12's default Agent window did not load the development extension; its classic window passed all six smoke checks and reported VS Code 1.128.0. The launcher sets `--classic` only for the Cursor test process.
 
 ## Packaging and the release gate
 
