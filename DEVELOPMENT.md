@@ -2,7 +2,7 @@
 
 This file is for people working on the extension. The store page is [README.md](README.md); it and the other packaged files are listed in `.vscodeignore`, and this file isn't one of them. [PUBLISHING.md](PUBLISHING.md) is the release runbook.
 
-> **Not published yet.** The publisher ID `wisply` is a placeholder until it is registered on the VS Code Marketplace and Open VSX, and the setup guide link goes live with the wisply.ai install page. The source repositories, the support page and the mailbox in `package.json` must be public and live too. The bundled connector and the skill are interim snapshots (see [Vendored code](#vendored-code)). The release gate refuses a release package or a publish until all of these are final.
+> **Not published yet.** Wisply owns publisher ID `wisply` on the VS Code Marketplace and Open VSX. The setup guide, source repositories, support page and mailbox are live. The connector and skill are recorded snapshots from public `main` (see [Vendored code](#vendored-code)). The release gate still requires confirmed released Mac app versions before it allows store packaging or publication. See [publisher ownership evidence](docs/validation/publisher-ownership-20261029.md).
 
 ## Requirements
 

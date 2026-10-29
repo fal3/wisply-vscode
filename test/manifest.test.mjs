@@ -22,7 +22,7 @@ const atMost = (a, b) => {
   return true;
 };
 
-test('identity: wisply.wisply, MIT, free, placeholder publisher until D6 is confirmed', () => {
+test('identity: wisply.wisply, MIT, free', () => {
   assert.equal(manifest.name, 'wisply');
   assert.equal(manifest.displayName, 'Wisply');
   assert.equal(manifest.publisher, 'wisply');

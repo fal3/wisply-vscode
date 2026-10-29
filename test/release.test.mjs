@@ -42,12 +42,10 @@ const releasable = () => withMcp({ ...source, provisional: false, skill: { ...so
   (entry) => ({ ...entry, ...FROM_GITHUB_MAIN, contract_provisional: false }));
 const ready = (overrides = {}) => releaseProblems({ source: releasable(), final: ALL_FINAL, readme: STORE_README, ...overrides });
 
-test('this tree refuses release until publisher and app versions are final', () => {
+test('this tree refuses release until the released app versions are confirmed', () => {
   const problems = releaseProblems({ source, readme });
-  assert.equal(problems.length, 2, problems.join('\n'));
-  assert.match(problems[0], /publisher/);
-  assert.equal(problems[1], 'README.md still has {READ_MIN}, {RECORDING_MIN}: fill them in from App Store Connect.');
-  assert.deepEqual({ ...FINAL }, { publisher: false, setupGuide: true, repositories: true, support: true });
+  assert.deepEqual(problems, ['README.md still has {READ_MIN}, {RECORDING_MIN}: fill them in from App Store Connect.']);
+  assert.deepEqual({ ...FINAL }, ALL_FINAL);
 });
 
 test('one mailbox: package.json, README.md and SECURITY.md all name SUPPORT_EMAIL, which FINAL.support confirms', () => {

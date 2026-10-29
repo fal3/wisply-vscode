@@ -46,7 +46,7 @@ export const MCP_REMOTE = 'https://github.com/fal3/wisply-mcp';
  */
 export const FINAL = Object.freeze({
   /** package.json "publisher" ("wisply"): registered on the VS Code Marketplace and Open VSX (spec D6). */
-  publisher: false,
+  publisher: true,
   /** SETUP_GUIDE_URL (src/extension.ts) and package.json "homepage": live with the wisply.ai install page. */
   setupGuide: true,
   /**
