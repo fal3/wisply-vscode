@@ -42,9 +42,9 @@ const releasable = () => withMcp({ ...source, provisional: false, skill: { ...so
   (entry) => ({ ...entry, ...FROM_GITHUB_MAIN, contract_provisional: false }));
 const ready = (overrides = {}) => releaseProblems({ source: releasable(), final: ALL_FINAL, readme: STORE_README, ...overrides });
 
-test('this tree refuses release until the released app versions are confirmed', () => {
+test('this tree refuses release until the released recording version is confirmed', () => {
   const problems = releaseProblems({ source, readme });
-  assert.deepEqual(problems, ['README.md still has {READ_MIN}, {RECORDING_MIN}: fill them in from App Store Connect.']);
+  assert.deepEqual(problems, ['README.md still has {RECORDING_MIN}: fill them in from App Store Connect.']);
   assert.deepEqual({ ...FINAL }, ALL_FINAL);
 });
 
@@ -90,7 +90,7 @@ test('the store README can\'t keep a {PLACEHOLDER}', () => {
   assert.deepEqual(ready({ readme: `${STORE_README}Wisply 3.4 or later; {"json": 1}; \${x}\n` }), []);
   assert.equal(ready({ readme: `${STORE_README}Wisply {READ_MIN} or later\n` }).length, 1);
   assert.deepEqual(placeholders('{A} {B_2} {A} {lower} {} {"k": 1}'), ['{A}', '{B_2}']);
-  assert.deepEqual(placeholders(readme), ['{READ_MIN}', '{RECORDING_MIN}']);
+  assert.deepEqual(placeholders(readme), ['{RECORDING_MIN}']);
 });
 
 test('"main" counts only as checked against GitHub\'s main (sync-vendor records the remote and its tip)', () => {
