@@ -11,7 +11,7 @@ The extension talks only to the Wisply app on your Mac, at 127.0.0.1, with no ac
 
 ## Requirements
 
-- macOS, with [Wisply for Mac](https://www.wisply.ai) {READ_MIN} or later. The status bar item refreshes more often with Wisply {RECORDING_MIN} or later.
+- macOS, with [Wisply for Mac](https://www.wisply.ai) 1.11.0 or later. The status bar item refreshes more often with Wisply {RECORDING_MIN} or later.
 - In Wisply: **Settings > Integrations > MCP Server**, turn on **Enable MCP server on this Mac**.
 - VS Code 1.93 or later. The MCP server needs VS Code 1.101 or later; on older versions, and in Cursor and other editors, see [Other editors](#other-editors).
 
